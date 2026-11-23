@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كورس مفاتيح التعامل مع الذكاء الاصطناعي</title>
-    <!-- استدعاء خط Cairo من Google Fonts -->
+    <title>دورة مرشد حج وعمرة | EL WAREED ONLINE ACADEMY</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --navy-dark: #132968;
-            --navy-light: #1e3a8a;
-            --yellow-badge: #facc15;
-            --green-cta: #16a34a;
-            --green-hover: #15803d;
-            --bg-light: #f4f7fb;
-            --text-dark: #1e293b;
-            --text-gray: #64748b;
-            --blue-accent: #1d4ed8;
+            --crimson: #9A2A2A;
+            --crimson-dark: #781e1e;
+            --teal: #1E4F4E;
+            --teal-dark: #153938;
+            --beige: #E9DBCF;
+            --beige-light: #f6efe9;
+            --gold-brown: #A67A50;
+            --text-dark: #1f2421;
+            --text-muted: #5c534c;
+            --white: #ffffff;
         }
 
         * {
@@ -27,9 +27,9 @@
         }
 
         body {
-            background-color: #ffffff;
+            background-color: var(--white);
             color: var(--text-dark);
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
         .container {
@@ -38,12 +38,35 @@
             padding: 0 20px;
         }
 
-        /* --- 1. الشريط العلوي والعداد التنازلي --- */
+        /* --- الشريط العلوي والشعار والعداد --- */
         .top-banner {
-            background: linear-gradient(180deg, var(--navy-dark) 0%, var(--navy-light) 100%);
-            color: white;
+            background: linear-gradient(180deg, var(--crimson) 0%, var(--crimson-dark) 100%);
+            color: var(--white);
             padding: 20px 15px 30px;
             text-align: center;
+        }
+
+        .brand-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .brand-logo-img {
+            max-height: 68px;
+            max-width: 220px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .brand-fallback-name {
+            font-weight: 900;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
+            color: var(--beige);
+            margin-top: 6px;
         }
 
         .top-pills {
@@ -55,24 +78,24 @@
         }
 
         .pill-white {
-            background: white;
-            color: var(--navy-dark);
+            background: var(--beige);
+            color: var(--crimson-dark);
             padding: 6px 16px;
             border-radius: 50px;
-            font-weight: 700;
+            font-weight: 800;
             font-size: 0.85rem;
         }
 
         .pill-glass {
-            background: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.28);
             padding: 6px 16px;
             border-radius: 50px;
             font-size: 0.85rem;
         }
 
         .pill-glass span {
-            color: var(--yellow-badge);
+            color: var(--beige);
             font-weight: 800;
         }
 
@@ -84,13 +107,13 @@
             margin-bottom: 18px;
         }
 
-        .badge-yellow {
-            background: var(--yellow-badge);
-            color: var(--navy-dark);
-            font-weight: 900;
-            padding: 6px 18px;
+        .badge-gold {
+            background: var(--gold-brown);
+            color: var(--white);
+            font-weight: 800;
+            padding: 5px 16px;
             border-radius: 10px;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         .countdown-wrapper {
@@ -98,6 +121,7 @@
             justify-content: center;
             align-items: center;
             gap: 12px;
+            flex-wrap: wrap;
         }
 
         .timer-boxes {
@@ -107,7 +131,8 @@
         }
 
         .timer-box {
-            background: rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.22);
             border-radius: 10px;
             padding: 8px 14px;
             min-width: 62px;
@@ -115,84 +140,86 @@
 
         .timer-box .num {
             display: block;
-            color: var(--yellow-badge);
-            font-size: 1.4rem;
-            font-weight: 800;
+            color: var(--beige);
+            font-size: 1.35rem;
+            font-weight: 900;
             line-height: 1.2;
         }
 
         .timer-box .label {
             font-size: 0.75rem;
-            color: #e2e8f0;
+            color: #f5ece4;
         }
 
-        /* --- 2. قسم الهيرو والفيديو --- */
+        /* --- قسم الهيرو --- */
         .hero-section {
-            padding: 30px 0;
+            padding: 32px 0;
             text-align: center;
         }
 
         .target-audience-box {
-            background: #eef4ff;
-            color: var(--navy-light);
+            background: var(--beige-light);
+            border: 1px solid var(--beige);
+            color: var(--teal);
             padding: 16px 20px;
-            border-radius: 20px;
+            border-radius: 18px;
             font-weight: 700;
             font-size: 0.95rem;
-            margin-bottom: 25px;
+            margin-bottom: 24px;
         }
 
         .hero-title {
-            font-size: 2rem;
+            font-size: 1.9rem;
             font-weight: 900;
-            line-height: 1.3;
-            margin-bottom: 15px;
+            line-height: 1.35;
+            margin-bottom: 14px;
+            color: var(--text-dark);
         }
 
         .hero-title span {
-            color: var(--blue-accent);
+            color: var(--crimson);
         }
 
         .hero-subtitle {
-            color: var(--text-gray);
+            color: var(--text-muted);
             font-size: 1rem;
-            margin-bottom: 25px;
+            margin-bottom: 24px;
         }
 
         .video-wrapper {
             position: relative;
             border-radius: 18px;
             overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-            aspect-ratio: 16/9;
-            background: #000;
+            box-shadow: 0 12px 28px rgba(30, 79, 78, 0.14);
+            aspect-ratio: 16 / 9;
+            background: #111;
+            border: 2px solid var(--beige);
         }
 
-        .video-wrapper iframe, .video-wrapper img {
+        .video-wrapper iframe {
             width: 100%;
             height: 100%;
-            object-fit: cover;
             border: none;
         }
 
-        /* --- 3. بطاقة السعر والخصم --- */
+        /* --- بطاقة السعر --- */
         .pricing-section {
-            background: var(--bg-light);
-            padding: 40px 0;
+            background: var(--beige-light);
+            padding: 42px 0;
         }
 
         .pricing-card {
-            background: white;
+            background: var(--white);
             border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
             text-align: center;
-            border: 1px solid #e2e8f0;
+            border: 1px solid var(--beige);
         }
 
         .pricing-header {
-            background: var(--navy-dark);
-            color: white;
+            background: var(--crimson);
+            color: var(--white);
             padding: 20px;
         }
 
@@ -201,11 +228,12 @@
             font-weight: 700;
             margin-bottom: 10px;
             display: block;
+            color: var(--beige);
         }
 
         .pricing-header .students-pill {
-            background: white;
-            color: var(--navy-dark);
+            background: var(--white);
+            color: var(--crimson-dark);
             display: inline-block;
             padding: 5px 18px;
             border-radius: 50px;
@@ -214,7 +242,7 @@
         }
 
         .pricing-header .students-pill span {
-            color: var(--blue-accent);
+            color: var(--teal);
         }
 
         .pricing-body {
@@ -222,20 +250,21 @@
         }
 
         .course-badge {
-            background: #eef4ff;
-            color: var(--blue-accent);
+            background: var(--beige-light);
+            color: var(--gold-brown);
+            border: 1px solid var(--beige);
             padding: 5px 16px;
             border-radius: 50px;
-            font-weight: 700;
+            font-weight: 800;
             font-size: 0.85rem;
             display: inline-block;
-            margin-bottom: 15px;
+            margin-bottom: 14px;
         }
 
         .course-name {
-            font-size: 1.7rem;
+            font-size: 1.75rem;
             font-weight: 900;
-            color: var(--navy-dark);
+            color: var(--crimson-dark);
             margin-bottom: 10px;
         }
 
@@ -243,254 +272,227 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 15px;
-            margin: 25px 0 10px;
-            direction: ltr;
+            gap: 14px;
+            margin: 24px 0 10px;
+            flex-wrap: wrap;
         }
 
         .current-price {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 900;
-            color: var(--navy-dark);
+            color: var(--teal);
         }
 
         .old-price {
-            font-size: 1.5rem;
-            color: #94a3b8;
+            font-size: 1.35rem;
+            color: #9b8f86;
             text-decoration: line-through;
             font-weight: 700;
         }
 
         .price-note {
-            color: var(--text-gray);
-            font-size: 0.85rem;
-            margin-bottom: 25px;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            margin-bottom: 24px;
         }
 
         .card-timer-box {
-            background: #f8fafc;
+            background: var(--beige-light);
             border-radius: 16px;
             padding: 20px;
-            border: 1px solid #e2e8f0;
+            border: 1px solid var(--beige);
         }
 
         .card-timer-boxes {
             display: flex;
             justify-content: center;
             gap: 12px;
-            margin-top: 15px;
+            margin-top: 14px;
             direction: ltr;
         }
 
         .c-box {
-            background: white;
-            padding: 10px 18px;
+            background: var(--white);
+            padding: 10px 16px;
             border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            min-width: 75px;
+            border: 1px solid var(--beige);
+            min-width: 74px;
         }
 
         .c-box .num {
             display: block;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 900;
-            color: var(--navy-dark);
+            color: var(--crimson);
         }
 
-        /* --- زر الاشتراك وضمان الاسترجاع --- */
+        /* --- زر الاشتراك --- */
         .cta-container {
             text-align: center;
-            margin: 25px 0;
+            margin: 24px 0;
         }
 
         .cta-btn {
             display: block;
             width: 100%;
-            background: var(--green-cta);
-            color: white;
+            background: var(--teal);
+            color: var(--white);
             text-decoration: none;
-            padding: 18px;
+            padding: 17px;
             border-radius: 14px;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 800;
-            box-shadow: 0 8px 20px rgba(22, 163, 74, 0.3);
-            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(30, 79, 78, 0.25);
+            transition: 0.25s;
         }
 
         .cta-btn:hover {
-            background: var(--green-hover);
+            background: var(--teal-dark);
             transform: translateY(-2px);
         }
 
         .guarantee-text {
             margin-top: 12px;
-            font-size: 0.85rem;
-            color: var(--text-gray);
+            font-size: 0.86rem;
+            color: var(--text-muted);
             font-weight: 600;
         }
 
-        /* --- 4. آراء صناع المحتوى --- */
-        .testimonials-section {
-            padding: 50px 0;
+        /* --- الأقسام العامة --- */
+        .section-pad {
+            padding: 46px 0;
+        }
+
+        .section-bg-beige {
+            background: var(--beige-light);
         }
 
         .section-heading {
             text-align: center;
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             font-weight: 900;
-            margin-bottom: 30px;
+            margin-bottom: 28px;
             color: var(--text-dark);
         }
 
-        .review-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 20px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        .section-heading span {
+            color: var(--crimson);
         }
 
-        .stars {
-            color: #facc15;
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-            text-align: left;
-        }
-
-        .review-text {
-            font-size: 0.98rem;
-            color: #334155;
-            margin-bottom: 20px;
-            line-height: 1.7;
-        }
-
-        .reviewer-info {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 15px;
-            text-align: left;
-        }
-
-        .reviewer-info img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #e2e8f0;
-        }
-
-        .reviewer-details h4 {
-            font-weight: 800;
-            font-size: 1.05rem;
-        }
-
-        .reviewer-details p {
-            font-size: 0.85rem;
-            color: var(--text-gray);
-        }
-
-        /* --- 5. قسم المشاكل والحلول --- */
-        .problems-section {
-            background: var(--bg-light);
-            padding: 50px 0;
-        }
-
-        .problem-card {
-            background: white;
+        /* --- لماذا تحتاج الدورة؟ --- */
+        .info-card {
+            background: var(--white);
+            border: 1px solid var(--beige);
             border-radius: 18px;
-            padding: 22px;
-            margin-bottom: 16px;
+            padding: 20px;
+            margin-bottom: 14px;
             display: flex;
             align-items: flex-start;
-            gap: 16px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            gap: 14px;
         }
 
-        .problem-icon {
-            background: #eef4ff;
-            color: var(--blue-accent);
-            width: 48px;
-            height: 48px;
+        .info-icon {
+            background: var(--beige-light);
+            color: var(--gold-brown);
+            width: 46px;
+            height: 46px;
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             flex-shrink: 0;
         }
 
-        .problem-content h3 {
-            font-size: 1.1rem;
+        .info-content h3 {
+            font-size: 1.05rem;
             font-weight: 800;
-            color: var(--navy-dark);
-            margin-bottom: 6px;
+            color: var(--crimson-dark);
+            margin-bottom: 4px;
         }
 
-        .problem-content p {
+        .info-content p {
             font-size: 0.9rem;
-            color: var(--text-gray);
+            color: var(--text-muted);
         }
 
-        /* --- 6. منهج الكورس (Timeline) --- */
-        .curriculum-section {
-            padding: 50px 0;
+        /* --- ماذا ستحصل عليه --- */
+        .benefit-card {
+            background: var(--beige-light);
+            border-right: 4px solid var(--teal);
+            border-radius: 14px;
+            padding: 18px 20px;
+            margin-bottom: 14px;
         }
 
+        .benefit-card h3 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--teal);
+            margin-bottom: 5px;
+        }
+
+        .benefit-card p {
+            font-size: 0.92rem;
+            color: var(--text-dark);
+        }
+
+        /* --- منهج الدورة --- */
         .course-stats {
             text-align: center;
             font-weight: 700;
             font-size: 0.9rem;
-            color: var(--text-dark);
-            margin-bottom: 40px;
+            color: var(--gold-brown);
+            margin-bottom: 34px;
         }
 
         .timeline-item {
             position: relative;
-            padding-right: 65px;
-            padding-bottom: 40px;
-            border-right: 2px solid #cbd5e1;
-            margin-right: 22px;
+            padding-right: 60px;
+            padding-bottom: 34px;
+            border-right: 2px solid var(--beige);
+            margin-right: 20px;
         }
 
         .timeline-item:last-child {
             border-right: none;
+            padding-bottom: 0;
         }
 
         .timeline-circle {
             position: absolute;
-            right: -24px;
+            right: -22px;
             top: 0;
-            width: 46px;
-            height: 46px;
-            background: white;
-            border: 2px solid var(--blue-accent);
-            color: var(--blue-accent);
+            width: 42px;
+            height: 42px;
+            background: var(--white);
+            border: 2px solid var(--crimson);
+            color: var(--crimson);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 900;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .unit-tag {
-            color: var(--blue-accent);
-            font-weight: 700;
+            color: var(--gold-brown);
+            font-weight: 800;
             font-size: 0.85rem;
         }
 
         .unit-title {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 900;
-            margin: 5px 0 10px;
+            margin: 4px 0 8px;
+            color: var(--text-dark);
         }
 
         .unit-desc {
-            color: var(--text-gray);
+            color: var(--text-muted);
             font-size: 0.92rem;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .lesson-list {
@@ -500,17 +502,71 @@
         .lesson-list li {
             position: relative;
             padding-right: 18px;
-            margin-bottom: 8px;
+            margin-bottom: 7px;
             font-weight: 600;
             font-size: 0.92rem;
         }
 
         .lesson-list li::before {
             content: "◆";
-            color: var(--blue-accent);
+            color: var(--teal);
             position: absolute;
             right: 0;
             font-size: 0.8rem;
+        }
+
+        /* --- آراء الطالبات --- */
+        .review-card {
+            background: var(--white);
+            border: 1px solid var(--beige);
+            border-radius: 20px;
+            padding: 22px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+        }
+
+        .stars {
+            color: var(--gold-brown);
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+        }
+
+        .review-text {
+            font-size: 0.96rem;
+            color: var(--text-dark);
+            margin-bottom: 14px;
+        }
+
+        .reviewer-name {
+            font-weight: 800;
+            color: var(--crimson-dark);
+            font-size: 0.98rem;
+        }
+
+        .reviewer-role {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+        }
+
+        /* --- تذييل الصفحة --- */
+        .footer {
+            background: var(--crimson-dark);
+            color: var(--beige);
+            text-align: center;
+            padding: 32px 20px 85px;
+        }
+
+        .footer-logo {
+            max-height: 62px;
+            max-width: 200px;
+            object-fit: contain;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            font-size: 0.88rem;
+            opacity: 0.9;
         }
 
         /* --- زر واتساب العائم --- */
@@ -518,8 +574,8 @@
             position: fixed;
             bottom: 20px;
             left: 20px;
-            background: #22c55e;
-            color: white;
+            background: var(--teal);
+            color: var(--white);
             padding: 10px 18px;
             border-radius: 50px;
             text-decoration: none;
@@ -528,28 +584,33 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+            box-shadow: 0 6px 18px rgba(30, 79, 78, 0.35);
             z-index: 1000;
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. الشريط العلوي -->
+    <!-- الشريط العلوي -->
     <header class="top-banner">
         <div class="container">
+            <div class="brand-header">
+                <img src="./logo.png" alt="EL WAREED ONLINE ACADEMY" class="brand-logo-img" onerror="this.style.display='none'">
+                <div class="brand-fallback-name">EL WAREED ONLINE ACADEMY</div>
+            </div>
+
             <div class="top-pills">
-                <div class="pill-white">📄 مناسب للمبتدئين</div>
-                <div class="pill-glass">👥 انضم حتى الآن أكثر من <span>4.4K</span> طالب</div>
+                <div class="pill-white">مناسب للمبتدئين</div>
+                <div class="pill-glass">انضم حتى الآن أكثر من <span>1.8K</span> متدرب</div>
             </div>
 
             <div class="discount-row">
-                <span class="badge-yellow">خصم 70%</span>
-                <span style="font-weight: 700; font-size: 1.1rem;">لفترة محدودة</span>
+                <span class="badge-gold">خصم 50%</span>
+                <span style="font-weight: 700; font-size: 1.05rem;">لفترة محدودة</span>
             </div>
 
             <div class="countdown-wrapper">
-                <span style="font-weight: 700; font-size: 0.95rem;">ينتهي الخصم خلال:</span>
+                <span style="font-weight: 700; font-size: 0.92rem;">ينتهي الخصم خلال:</span>
                 <div class="timer-boxes">
                     <div class="timer-box"><span class="num" id="top-hours">45</span><span class="label">ساعة</span></div>
                     <div class="timer-box"><span class="num" id="top-mins">19</span><span class="label">دقيقة</span></div>
@@ -559,53 +620,53 @@
         </div>
     </header>
 
-    <!-- 2. قسم الهيرو -->
+    <!-- قسم الهيرو -->
     <section class="hero-section">
         <div class="container">
             <div class="target-audience-box">
-                للموظفين والمدراء وأصحاب الأعمال الحرة ، والطلاب الذين يريدون استخدام الذكاء الاصطناعي كمهارة عملية ترفع جودة عملهم وتسرّع إنجازهم
+                للراغبين في مرافقة المعتمرين والحجاج، ومنظمي الرحلات الدينية، والمهتمين بالإرشاد الميداني والشرعي في الحرمين
             </div>
 
             <h1 class="hero-title">
-                كل ما تحتاجه لفهم <span>الذكاء الاصطناعي من جذوره والتعامل مع أي أداة بذكاء خلال</span> 7 أيام
+                كل ما تحتاجه لتصبح <span>مرشد حج وعمرة معتمداً ومحترفاً</span> خلال 7 أيام
             </h1>
 
             <p class="hero-subtitle">
-                برنامج عملي يساعدك على التعامل مع الذكاء الاصطناعي والتعامل مع أي أداة بذكاء، بدل تعلّم أداة واحدة فقط، وبدون التشتت بين المصادر أو إهدار Tokens في تجارب عشوائية
+                دورة عملية شاملة تؤهلك لمرافقة المعتمرين والحجاج خطوة بخطوة، من فقه المناسك وإدارة الأفواج إلى التعامل الميداني في الحرمين.
             </p>
 
             <div class="video-wrapper">
-                <!-- استبدل الرابط برابط فيديو يوتيوب الخاص بك -->
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="فيديو تعريفي" allowfullscreen></iframe>
+                <!-- استبدل رابط الفيديو برابط فيديو الدورة التعريفي -->
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="فيديو تعريفي بدورة مرشد حج وعمرة" allowfullscreen></iframe>
             </div>
         </div>
     </section>
 
-    <!-- 3. بطاقة السعر والخصم -->
+    <!-- بطاقة السعر -->
     <section class="pricing-section" id="checkout">
         <div class="container">
             <div class="pricing-card">
                 <div class="pricing-header">
-                    <span class="launch-tag">🟡 عرض الإطلاق – لفترة محدودة</span>
-                    <div class="students-pill">انضم أكثر من <span>4.4K</span> طالب حتى الآن</div>
+                    <span class="launch-tag">عرض التسجيل الخاص – لفترة محدودة</span>
+                    <div class="students-pill">انضم أكثر من <span>1.8K</span> متدرب حتى الآن</div>
                 </div>
 
                 <div class="pricing-body">
-                    <span class="course-badge">كورس خاص بالمبتدئين</span>
-                    <h2 class="course-name">كورس مفاتيح التعامل مع الذكاء الاصطناعي</h2>
-                    <p style="color: var(--text-gray); font-size: 0.95rem;">ابدأ من الصفر وتعلّم استخدام أدوات الذكاء الاصطناعي بطريقة عملية ومنظّمة.</p>
+                    <span class="course-badge">EL WAREED ONLINE ACADEMY</span>
+                    <h2 class="course-name">دورة مرشد حج وعمرة</h2>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">تعلّم أصول المناسك وإدارة الرحلات الميدانية بأسلوب واضح ومنظّم.</p>
 
                     <div class="price-box">
-                        <span class="badge-yellow" style="font-size: 0.95rem;">خصم 70%</span>
-                        <span class="old-price">$150</span>
-                        <span class="current-price">$47</span>
+                        <span class="badge-gold">خصم 50%</span>
+                        <span class="old-price">6000 دج</span>
+                        <span class="current-price">3000 دج</span>
                     </div>
 
-                    <p class="price-note">دفعة واحدة • بدون اشتراكات • بدون رسوم خفية</p>
+                    <p class="price-note">رسوم الدورة كاملة • بدون اشتراكات • بدون رسوم خفية</p>
 
                     <div class="card-timer-box">
-                        <h4 style="font-weight: 800;">ينتهي الخصم خلال</h4>
-                        <p style="font-size: 0.8rem; color: var(--text-gray);">استفد من السعر الخاص قبل انتهاء العرض</p>
+                        <h4 style="font-weight: 800; color: var(--crimson-dark);">ينتهي الخصم خلال</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">اغتنم سعر العرض قبل انتهاء العد التنازلي</p>
                         <div class="card-timer-boxes">
                             <div class="c-box"><span class="num" id="card-secs">07</span><span style="font-size:0.75rem;">ثانية</span></div>
                             <div class="c-box"><span class="num" id="card-mins">19</span><span style="font-size:0.75rem;">دقيقة</span></div>
@@ -616,145 +677,190 @@
             </div>
 
             <div class="cta-container">
-                <a href="#payment-link" class="cta-btn">اشترك الآن</a>
-                <p class="guarantee-text">استرد المبلغ بالكامل خلال 7 أيام إذا كنت غير سعيد بمحتوى الدورة</p>
+                <!-- غيّر الرابط إلى رابط التسجيل أو الدفع الخاص بك -->
+                <a href="https://wa.me/213000000000?text=أرغب%20في%20التسجيل%20في%20دورة%20مرشد%20حج%20وعمرة" target="_blank" class="cta-btn">اشترك الآن – 3000 دج</a>
+                <p class="guarantee-text">دعم مباشر ومتابعة كاملة لمساعدتك في تطبيق ما تعلمته بثقة</p>
             </div>
         </div>
     </section>
 
-    <!-- 4. آراء صناع المحتوى -->
-    <section class="testimonials-section">
+    <!-- لماذا تحتاج هذه الدورة؟ -->
+    <section class="section-pad">
         <div class="container">
-            <h2 class="section-heading">رأي صناع المحتوى في الكورس</h2>
+            <h2 class="section-heading">لماذا تحتاج إلى <span>دورة مرشد حج وعمرة</span>؟</h2>
 
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <p class="review-text">
-                    أولاً شهادتي مجروحة، بس خليني باختصار أقول إن أي تطور في طريقة استخدامي للـ AI كان بسبب هذا المنهج. ساعدني في بناء منصة كاملة وربطها بـ GitHub وعمل deployment واستخدامها بالفعل.
-                </p>
-                <div class="reviewer-info">
-                    <div class="reviewer-details">
-                        <h4>أحمد أبو زيد</h4>
-                        <p>صانع محتوى • +10 مليون متابع</p>
-                    </div>
-                    <img src="https://via.placeholder.com/60" alt="صورة">
+            <div class="info-card">
+                <div class="info-icon">📖</div>
+                <div class="info-content">
+                    <h3>تجنّب الأخطاء الفقهية أثناء التوجيه</h3>
+                    <p>الوقوع في فتوى أو توجيه غير دقيق قد يربك المعتمرين؛ لذا نبدأ بأساسيات المناسك والأحكام الشائعة بوضوح.</p>
                 </div>
             </div>
 
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <p class="review-text">
-                    طريقة شرحه مبسطة جداً، والأمثلة اللي بيقولها واضحة جداً، طريقة تعليقه وتفاعله مع الأشياء بتخلي الموضوع ممتع وسهل التعلم.
-                </p>
-                <div class="reviewer-info">
-                    <div class="reviewer-details">
-                        <h4>عمرو رمضان</h4>
-                        <p>سفير المنح • +1.3 مليون متابع</p>
-                    </div>
-                    <img src="https://via.placeholder.com/60" alt="صورة">
+            <div class="info-card">
+                <div class="info-icon">🧭</div>
+                <div class="info-content">
+                    <h3>إدارة وتنظيم الأفواج في أوقات الذروة</h3>
+                    <p>التنقل بين المواقيت والمشاعر يتطلب خطة واضحة وانضباطاً عالياً للحفاظ على تماسك المجموعة.</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">🤝</div>
+                <div class="info-content">
+                    <h3>التعامل الميداني مع كبار السن والحالات الخاصة</h3>
+                    <p>مراعاة الفروق الصحية والبدنية وتقديم الدعم النفسي والمعنوي للمعتمرين طوال الرحلة.</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">📋</div>
+                <div class="info-content">
+                    <h3>الاستعداد التنظيمي والإداري المسبق</h3>
+                    <p>معرفة خطوات التحضير والجدولة قبل السفر لتفادي الارتباك أو نسيان التفاصيل المهمة.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. قسم المشاكل -->
-    <section class="problems-section">
+    <!-- ماذا ستحصل عليه من الدورة؟ -->
+    <section class="section-pad section-bg-beige">
         <div class="container">
-            <h2 class="section-heading">لماذا لا تحصل على النتائج التي تتوقعها من الذكاء الاصطناعي؟</h2>
+            <h2 class="section-heading">ماذا ستحصل عليه <span>من الدورة</span>؟</h2>
 
-            <div class="problem-card">
-                <div class="problem-icon">📝</div>
-                <div class="problem-content">
-                    <h3>الاعتماد على برومبتات جاهزة</h3>
-                    <p>نسخ أوامر جاهزة دون فهم طريقة عملها، يجعلك غير قادر على تعديلها أو الحصول على نتائج تناسب احتياجاتك.</p>
-                </div>
+            <div class="benefit-card">
+                <h3>شهادة إتمام معتمدة من الأكاديمية</h3>
+                <p>شهادة باسمك من EL WAREED ONLINE ACADEMY توثّق إتمامك لمحتوى الدورة التدريبية.</p>
             </div>
 
-            <div class="problem-card">
-                <div class="problem-icon">⏱️</div>
-                <div class="problem-content">
-                    <h3>الانشغال بالتفاصيل المعقدة</h3>
-                    <p>قضاء وقت طويل في تعلم مصطلحات تقنية لا تحتاجها، بدل التركيز على المهارات التي تساعدك في عملك.</p>
-                </div>
+            <div class="benefit-card">
+                <h3>حقيبة المرشد الرقمية الجاهزة</h3>
+                <p>ملفات وقوائم تنظيمية تساعدك على ترتيب خطوات الرحلة وتذكير المعتمرين بالمناسك والأدعية.</p>
             </div>
 
-            <div class="problem-card">
-                <div class="problem-icon">📈</div>
-                <div class="problem-content">
-                    <h3>توقّع النتائج دون فهم الأساسيات</h3>
-                    <p>تجربة عشرات البرومبتات والأدوات دون فهم كيفية توجيهها بشكل صحيح، يؤدي إلى نتائج غير مستقرة.</p>
-                </div>
+            <div class="benefit-card">
+                <h3>شرح عملي مبسّط بعيد عن التعقيد</h3>
+                <p>محتوى مرتب يجمع بين المعلومة الشرعية الصحيحة والخبرة الميدانية القابلة للتطبيق المباشر.</p>
             </div>
 
-            <div class="problem-card">
-                <div class="problem-icon">🔀</div>
-                <div class="problem-content">
-                    <h3>استخدام الأدوات دون منهج واضح</h3>
-                    <p>التنقل المستمر بين أدوات الذكاء الاصطناعي وكتابة أوامر عشوائية دون خطوات محددة للوصول إلى نتيجة.</p>
-                </div>
+            <div class="benefit-card">
+                <h3>متابعة وإجابة على الاستفسارات</h3>
+                <p>فرصة لطرح أسئلتك وتوضيح النقاط العملية لتكون جاهزاً للعمل بثقة.</p>
             </div>
 
             <div class="cta-container">
-                <a href="#checkout" class="cta-btn">اشترك الآن</a>
-                <p class="guarantee-text">استرد المبلغ بالكامل خلال 7 أيام إذا كنت غير سعيد بمحتوى الدورة</p>
+                <a href="#checkout" class="cta-btn">احجز مقعدك الآن</a>
             </div>
         </div>
     </section>
 
-    <!-- 6. منهج الكورس -->
-    <section class="curriculum-section">
+    <!-- تفاصيل ومنهج الدورة -->
+    <section class="section-pad">
         <div class="container">
-            <h2 class="section-heading" style="margin-bottom: 10px;">مسارك لإحتراف الذكاء الاصطناعي</h2>
-            <p style="text-align: center; color: var(--text-gray); margin-bottom: 15px;">
-                رحلة عملية تبدأ من أول Prompt تكتبه، وتنتهي بقدرتك على استخدام الذكاء الاصطناعي بثقة في عملك اليومي.
+            <h2 class="section-heading">تفاصيل <span>ومنهج الدورة</span></h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 12px;">
+                مسار تدريبي متدرج يأخذك من الفهم النظري الواضح إلى الجاهزية الميدانية الكاملة.
             </p>
             <div class="course-stats">
-                🎬 +28 درس | 🔄 تحديث دائم للكورس | ⏳ وصول لمدة سنة
+                3 وحدات متكاملة • حقيبة عملية • وصول مستمر لمحتوى الدورة
             </div>
 
             <div class="timeline-item">
                 <div class="timeline-circle">1</div>
                 <span class="unit-tag">الوحدة الأولى</span>
-                <h3 class="unit-title">فهم الذكاء الاصطناعي قبل أن تعتمد عليه</h3>
-                <p class="unit-desc">كيف يعمل الذكاء الاصطناعي فعلياً، وما الفرق بين توليد الإجابات وفهم المطلوب</p>
+                <h3 class="unit-title">فقه المناسك وأحكام العمرة والحج</h3>
+                <p class="unit-desc">ضبط المفاهيم الشرعية الأساسية والأخطاء الشائعة التي يقع فيها المعتمرون والحجاج.</p>
                 <ul class="lesson-list">
-                    <li>كيف بدأ الذكاء الاصطناعي؟</li>
-                    <li>ما هو الـ Generative AI؟</li>
-                    <li>ما هو الـ LLM؟</li>
-                    <li>هل الذكاء الاصطناعي يفهم فعلاً؟</li>
+                    <li>المواقيت المكانية والزمانية وأحكام الإحرام</li>
+                    <li>خطوات العمرة والحج من البداية إلى الختام</li>
+                    <li>أكثر الأخطاء الشائعة في الطواف والسعي وكيفية تصحيحها</li>
+                    <li>آداب الزيارة والتعامل مع المسائل الفقهية الطارئة</li>
                 </ul>
             </div>
 
             <div class="timeline-item">
                 <div class="timeline-circle">2</div>
                 <span class="unit-tag">الوحدة الثانية</span>
-                <h3 class="unit-title">فهم ما يحدث وراء النتيجة</h3>
-                <p class="unit-desc">ستتعرف على المفاهيم الأساسية مثل التوكن، ونافذة السياق، والهلوسة، حتى تتمكن من تقييم النتائج وتجنب المعلومات غير الدقيقة.</p>
+                <h3 class="unit-title">مهارات الإرشاد وقيادة الأفواج ميدانياً</h3>
+                <p class="unit-desc">كيف تقود المجموعة بهدوء وحكمة وتبني ثقة المعتمرين منذ لحظة الانطلاق.</p>
                 <ul class="lesson-list">
-                    <li>ما هو الـ Token وأهميته؟</li>
-                    <li>نافذة السياق Context Window</li>
-                    <li>هلوسة الذكاء الاصطناعي Hallucination</li>
-                    <li>الخصوصية والأمان في الـ AI</li>
-                    <li>الحل السحري لتوفير السياق</li>
+                    <li>مواصفات المرشد الناجح وأخلاقيات المرافقة</li>
+                    <li>آليات التواصل وإلقاء التوجيهات بوضوح</li>
+                    <li>التعامل مع كبار السن والمرضى والمرهقين</li>
+                    <li>حفظ نظام المجموعة وتفادي التفرق في الزحام</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-circle">3</div>
+                <span class="unit-tag">الوحدة الثالثة</span>
+                <h3 class="unit-title">التنظيم اللوجستي وإدارة المواقف الطارئة</h3>
+                <p class="unit-desc">جاهزية كاملة لإدارة الجداول اليومية والتصرف السريع عند حدوث أي طارئ.</p>
+                <ul class="lesson-list">
+                    <li>إعداد جداول التفويج والتحركات اليومية</li>
+                    <li>تنسيق السكن والنقل والتواصل مع الجهات المعنية</li>
+                    <li>التصرف السليم في حالات الضياع أو التأخير الصحي</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- زر واتساب العائم -->
-    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float">
+    <!-- آراء الطالبات حول الدورة -->
+    <section class="section-pad section-bg-beige">
+        <div class="container">
+            <h2 class="section-heading">آراء <span>الطالبات</span> حول الدورة</h2>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">
+                    "الدورة منظمة جداً وأسلوب الشرح واضح ومريح، استفدت كثيراً من ترتيب خطوات المناسك ومن النصائح العملية للتعامل مع المعتمرين."
+                </p>
+                <div class="reviewer-name">سارة بن علي</div>
+                <div class="reviewer-role">متدربة في الدورة</div>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">
+                    "أكثر ما أعجبني هو الجانب التطبيقي والاهتمام بالتفاصيل الميدانية مثل كبار السن وتنظيم الوقت، أعطتني ثقة كبيرة في هذا المجال."
+                </p>
+                <div class="reviewer-name">خديجة منصوري</div>
+                <div class="reviewer-role">متدربة في الدورة</div>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">
+                    "محتوى قيّم وسعر مناسب جداً مقارنة بالفائدة الكبيرة، أنصح بها كل من يريد دخول مجال إرشاد الحج والعمرة بخطوات صحيحة."
+                </p>
+                <div class="reviewer-name">أمينة بلقاسم</div>
+                <div class="reviewer-role">متدربة في الدورة</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة -->
+    <footer class="footer">
+        <div class="container">
+            <img src="./logo.png" alt="EL WAREED ONLINE ACADEMY" class="footer-logo" onerror="this.style.display='none'">
+            <p><strong>EL WAREED ONLINE ACADEMY</strong></p>
+            <p>جميع الحقوق محفوظة © 2026 – دورة مرشد حج وعمرة</p>
+        </div>
+    </footer>
+
+    <!-- زر واتساب العائم (استبدل الرقم برقمك) -->
+    <a href="https://wa.me/213000000000" target="_blank" class="whatsapp-float">
         <span>💬</span> للمساعدة
     </a>
 
-    <!-- كود تشغيل العداد التنازلي -->
     <script>
         let totalSeconds = (45 * 3600) + (19 * 60) + 7;
         setInterval(() => {
             if (totalSeconds <= 0) return;
             totalSeconds--;
-            let h = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
-            let m = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
-            let s = String(totalSeconds % 60).padStart(2, '0');
+            const h = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+            const m = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+            const s = String(totalSeconds % 60).padStart(2, '0');
 
             document.getElementById('top-hours').innerText = h;
             document.getElementById('top-mins').innerText = m;
